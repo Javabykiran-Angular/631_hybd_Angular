@@ -1,0 +1,51 @@
+<p>eventbinding2 works!</p>
+<!-- template ref. variable 
+    - if u want to send a data from view to comp. of particular html element
+    - It holds a Object/Handle of particular html element
+    - With the help of object we can manipulate its behaviour
+    - We can access Object as well as data of html element
+    - U can apply any html element
+    - Syntax 
+        #UniqueName
+
+-->
+
+<input #myname type="text" class="form-control w-25"  placeholder="Enter the Name" > <br><br>
+<button (click)="onSend(myname)" class="btn btn-warning" >Send</button>
+<hr>
+
+<input #myname1 type="text" class="form-control w-25"  placeholder="Enter the Name" > <br><br>
+<button (click)="onSend1(myname1.value)" class="btn btn-warning" >Send</button>
+
+<hr>
+
+<input #num1 class="form-control w-25" type="text" placeholder="Enter the Number1"><br> <br>
+<input #num2 class="form-control w-25" type="text" placeholder="Enter the Number2"><br> <br>
+<button (click)="onAddition(num1.value,num2.value)" class="btn btn-info">Addition</button> <br><br>
+<input [value]="result" class="form-control w-25" type="text" placeholder="Display the Result">
+<br><br><br><br>
+<br><br><br><br>
+<hr>
+
+<!--
+ Two way Data Binding 
+    - U will get Updatated data into the Property 
+    - ngModel => It is attribute Directive 
+    - U have to use FormsModule
+    - in app.module.ts file =>
+    import section (Key)=> We have to register FormsModule
+    - syntax 
+        [(ngModel)]="PropertyName"
+    - Banana in the box notation 
+        [()]
+    - U can apply any HTML tag 
+
+-->
+
+<input [(ngModel)]="name" class="form-control w-25" type="text" placeholder="Enter the Name">
+
+<h2> {{name}} </h2>
+
+
+<br><br><br><br>
+<br><br><br><br>

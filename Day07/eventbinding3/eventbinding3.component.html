@@ -1,0 +1,8 @@
+<p>eventbinding3 works!</p>
+
+<!-- syntax 
+    (change)="eventHandler"
+    - U can apply any html tag 
+-->
+
+<input #myname (change)="onChange(myname.value)"  type="text" class="form-control w-25" placeholder="Enter the Name">

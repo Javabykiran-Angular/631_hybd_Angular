@@ -1,0 +1,100 @@
+Last Lecture Agenda
+1  Pipe
+	- It is used to transform u r data without changing its original value 
+2 Inbuilt Pipe 
+	
+	<h2> {{strdetails | lowercase}}</h2>
+	<h2> {{strdetails | uppercase}}</h2>
+	<h2> {{strdetails | titlecase}}</h2>
+	
+	<h2> {{0.25 | percent}}</h2>
+	<h2> {{0.025 | percent:'1.1'}}</h2>
+	
+	<h2> {{0.25 | curreny}}</h2>
+	<h2> {{0.25 | curreny:'INR':'code'}}</h2>
+	<h2> {{0.25 | curreny:'GBP'}}</h2>
+	
+	<h2> {{6.234589 | number:'1.2-3'}}</h2>
+	<h2> {{6.234589 | number:'2.2-3'}}</h2>
+	
+	<h2> {{mydate}}</h2>
+	<h2> {{mydate|date:'mediumDate'}}</h2>
+	<h2> {{mydate|date:'dd-MM-yyyy'}}</h2>
+	<h2> {{mydate|date:'longDate'| uppercase}}</h2>
+	
+	.ts 
+	mydate=new Date();
+	
+
+summary & Interview Questions
+1 What is Pipe 
+2 Explain some pipe in angular?
+
+
+Today's Lecture Agenda
+1 Custom Pipe => user defined pipe 
+2 PipeTransform => Interface 
+3 transform(value:any,...item:any[])
+4 manual creation /Angular CLI 
+5 Http Services
+6 Http => It Is protocol(smtp,FTP,Http)
+	- Set of Rule 
+7 Http Request / Http Response 
+	Http Request Method
+		1 get  => get data from Backend server
+		2 post => send data from frontend to back end server 
+		3 put => To update a data of exsiting data 
+		4 delete => To delete a data 
+		
+		Http Request/Http Response
+			It has 2 parts
+			1 Request Header
+				- ip address 
+				- server ip address 
+				- method name 
+				- date & time 
+				- auth token 
+				- content Type 
+					- image 
+					- file 
+					- pdf 
+					- json 
+					- video 
+					- audio
+			2 Request Body 
+				data 
+					- json 
+					- text/html 
+					- xml => outdatated
+	
+	Http Response => http header + http body 
+     1 http header
+			- ip address 
+			- server ip address 
+			- method name 
+			- date & time 
+			- auth token 
+			- content Type 
+				- image 
+				- file 
+				- pdf 
+				- json 
+				- video 
+				- audio
+			- status code 
+				
+				1 2xx => 200-299 => success, ok 
+				2 3xx => 300-399 => Redirection 
+				3 4xx => 400-499 => client side error 
+				4 5xx => 500-599 => server side error 
+				
+				
+	2 	 http body  
+				data 
+					- json 
+					- text/html 
+					- xml => outdatated
+	
+summary & Interview Questions
+1 What is Pipe 
+2 Explain some pipe in angular?

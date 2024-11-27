@@ -1,0 +1,89 @@
+Last Lecture Agenda
+
+
+1 https://jsonplaceholder.typicode.com/posts
+
+	- It is a fake service 
+	- It can not store ur data into database but it gives a response of ur request 
+
+
+2 HttpClientModule
+	- It is given by Angular 
+	- app.module.ts file import 
+		import => HttpClientModule
+		
+		ng g s http 
+		
+	@Injectable({
+		privdedIn: 'root'
+	})
+	export class httpService{
+	url:string="..."
+		constructor(private http:HttpClient){}
+		
+		getPost(){
+		return 	(this.http.get(this.url));
+		}
+		
+	}
+	
+	post.ts 
+	
+	constructor(private service:httpService){}
+	
+	ngOninit(){
+		this.getdataFromBackend();
+	}
+	
+	getdataFromBackend(){
+		this.service.getPost()
+		.subscribe((myresponse)=>{
+			console.log(response);
+		})
+	}
+		
+3 Observabale
+
+https://javabykiran.com/what-is-observable-8-powerful-points-by-sumit/#:~:text=Key%20Points%20of%20What%20is%20Observable,-It%20emits%20multiple&text=It%20has%20different%20operators%20such,chat%20applications%20or%20live%20dashboards.
+
+summary & Interview Questions
+1 Which are Http Methods?
+2 How to connect Angular with backend server?
+3 Write down the steps to connect your backend server?
+4 Explain the Observabale?
+5 What is Observabale?
+
+
+Today's Lecture Agenda
+1 Display Data
+2 Post method	
+3 put method 
+
+summary & Interview Questions
+1 How to send data from Angular to backend server?
+2 How to Update any particular data in Angular?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

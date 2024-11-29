@@ -1,0 +1,93 @@
+Last Lecture Agenda
+1 delete method
+	<button (click)="onDelete(item.id)">
+	.ts
+	
+	onDelete(id:any){
+		this.service.deleteData(id)
+		.subscribe((response)=>{
+			....
+		},(myerror)=>{
+			...
+			console.log(myerror.status)
+		})
+	}
+	
+	.ts 
+	deleteData(id){
+		return (this.http.delete(`${this.url}/${id}`));
+	}
+2 Error Handling 
+3 Introduction to routing
+	- navigation from one component to another component
+	- U can send parametr from one component to another component
+	- Lazy Loading 
+	
+4 Routing Steps 
+	1 Configure Route 
+		app-routing.module.ts 
+			const route:Routes=[
+				
+				{
+					path:"",component:HomeComponent
+				},
+							
+				{
+					path:"Page1",component:Page1Component
+				},
+				{
+					path:"**",component:NotComponent
+				}
+				
+			]
+	2 <router-outlet> => Component directive
+		app.component.html 
+		
+	3 establish the link/navigate between component
+		
+		<a routerLink="/Page1">Page1 
+	
+5 Empty Path 
+6 Wild cart operator
+
+summary & Interview Questions
+1 How to Update any particular data in Angular?
+2 How to delete any particular Record 
+3 How to Handle Errors in Angular
+
+Today's Lecture Agenda
+1 Send parameter
+2 dynamic routing 
+3 lazy Loading 
+	- To create a own module 
+	- To create own routing module file 
+
+summary & Interview Questions
+1 What is Routing
+2 How to implement routing?
+3 what is purpose of routerLink?
+4 what is use of wild cart operator?
+5 What is empty path?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+Last Lecture Agenda
+1 Send parameter
+	[
+		{
+			path:"Page2/:id",...
+		}
+	]
+
+	home.ts
+	mtid:number=9;
+	
+	home.html
+	<a [routerLink]="['/Page2',myid]"
+	
+	page2.ts 
+	constructor(private route:ActivatatedRoute){}
+	
+	ngOninit(){
+		this.getDatafromUrl()
+	}
+	
+	getDatafromUrl(){
+		this.route.parmMap
+		.subscribe((param)=>{
+			param.get("id")
+		})
+	}
+	
+
+2 dynamic routing 
+	<buttton (click)="onPage1()">
+	home.ts
+	constructor(private router:Router)
+	onPage1(){
+		this.router.navigate(['/Page1']);
+		
+	}
+3 lazy Loading 
+	- To create a own module 
+	- To create own routing module file 
+	ng g m user --routing
+	
+	app-routing.module.ts 
+	
+	{
+		path:"user",loadChildren:()=>import('./user/user.module').then(m=>m.userModule)
+	}
+
+summary & Interview Questions
+1 What is Routing
+2 How to implement routing?
+3 what is purpose of routerLink?
+4 what is use of wild cart operator?
+5 What is empty path?
+
+Today's Lecture Agenda
+1 Template Driven Form (TDF)
+	- login form,sign up ,f/b form 
+	- all basic level validation is performed on view file 
+2 FormControl
+	- It is simple class is given by angular 
+	- U can apply any html element 
+	Property 
+	1 valid => true/false
+	2 invalid => true /false
+	3 touched => true/ false
+	4 pristine => true /false
+	5 dirty => true /false
+	6 errors => Object => Html attribute => true/false
+	
+3 How to use FormControl
+	1 To create a Object of FormControl => we have to use ngModel without its notation & we have to use name attribute 
+	2 Create Template ref variable & assign it ngModel 
+	3 to validate that element for that we use errors Object & use required attribute
+	
+
+summary & Interview Questions
+1 What is Template Driven Form
+2 What is FormControl?
+3 How to Use FormControl?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

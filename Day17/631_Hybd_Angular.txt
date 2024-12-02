@@ -1,0 +1,57 @@
+Last Lecture Agenda
+1 Template Driven Form (TDF)
+	- login form,sign up ,f/b form 
+	- all basic level validation is performed on view file 
+2 FormControl
+	- It is simple class is given by angular 
+	- U can apply any html element 
+	Property 
+	1 valid => true/false
+	2 invalid => true /false
+	3 touched => true/ false
+	4 pristine => true /false
+	5 dirty => true /false
+	6 errors => Object => Html attribute => true/false
+	
+3 How to use FormControl
+	1 To create a Object of FormControl => we have to use ngModel without its notation & we have to use name attribute 
+	2 Create Template ref variable & assign it ngModel 
+	3 to validate that element for that we use errors Object & use required attribute
+	
+
+summary & Interview Questions
+1 What is Template Driven Form
+2 What is FormControl?
+3 How to Use FormControl?
+
+
+Today's Lecture Agenda
+1 Continue tdf
+2 ngForm
+3 ngSubmit => It is event directive 
+
+summary & Interview Questions
+1 How to use ngForm?
+2 What is ngSubmit 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
